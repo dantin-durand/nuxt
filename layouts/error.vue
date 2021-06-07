@@ -4,7 +4,10 @@
       <h1>404</h1>
       <p>Page introuvable :(</p>
     </div>
-    <div v-else><h1>Une erreur est survenue</h1></div>
+    <div v-else>
+      <h1>{{ error.statusCode }}</h1>
+      <p>Une erreur est survenue</p>
+    </div>
     <nuxt-link to="/" class="btn mt-3 btn-dark">Page d'accueil</nuxt-link>
   </div>
 </template>
