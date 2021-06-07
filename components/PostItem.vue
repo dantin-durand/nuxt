@@ -30,6 +30,6 @@ export default {
   overflow: hidden;
 }
 .card p {
-  color: #b721ff;
+  color: #2a2a2a;
 }
 </style>

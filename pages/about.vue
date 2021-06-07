@@ -40,4 +40,7 @@ export default {
   border: 1px solid #ffffff78 !important;
   border-radius: 5px;
 }
+p {
+  line-height: 20px;
+}
 </style>

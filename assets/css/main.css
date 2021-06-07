@@ -7,3 +7,15 @@
   border: 1px solid #ffffff78 !important;
   border-radius: 5px;
 }
+
+.publications {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px 10%;
+  gap: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .publications {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
