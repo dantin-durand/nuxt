@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>A propos</h1>
-    <p>
+    <h1 class="mt-5">A propos</h1>
+    <p class="mt-5">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
       magnam aut quae, voluptatem quisquam animi unde laboriosam ex ab dicta
       dolor cum reprehenderit, accusantium eveniet quod repudiandae voluptatum
@@ -18,7 +18,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "A props de NUXT",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "A propos de NUXT Publications",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>

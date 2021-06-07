@@ -16,4 +16,7 @@ export default {
 body {
   font-family: "Roboto", sans-serif;
 }
+h1 {
+  font-size: 35px;
+}
 </style>

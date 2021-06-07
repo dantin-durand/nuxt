@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <b-jumbotron header="Nuxt" lead="Toutes les publications autour de NUXT">
       <b-button variant="primary" href="#" class="mt-3 cta">Consulter</b-button>
     </b-jumbotron>
@@ -7,13 +7,32 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: "Bienvenue sur NUXT Publication",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Bienvenue sur NUXT Publication",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
-.cta {
-  background: var(--main-gradient) !important;
-  border: 1px solid #ffffff78 !important;
-  border-radius: 5px;
+.home {
+  text-align: center;
+}
+.home .jumbotron {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark">
-      <b-navbar-brand href="#">Nuxt Publications</b-navbar-brand>
+      <b-navbar-brand href="#"><span>Nuxt</span>Publications</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -22,8 +22,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .navbar {
   background-image: var(--main-gradient) !important;
+}
+.navbar-brand > span {
+  font-weight: bold;
+  font-size: 30px;
+}
+.navbar-brand > span::after {
+  content: "/";
 }
 </style>

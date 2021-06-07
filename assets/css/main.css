@@ -1,6 +1,9 @@
 :root {
   --main-gradient: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 }
-/* .container {
-  padding: 20px 10%;
-} */
+
+.cta {
+  background: var(--main-gradient) !important;
+  border: 1px solid #ffffff78 !important;
+  border-radius: 5px;
+}

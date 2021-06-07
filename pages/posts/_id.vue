@@ -16,6 +16,13 @@ export default {
   head() {
     return {
       title: this.post.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.post.title,
+        },
+      ],
     };
   },
   async fetch() {
@@ -30,9 +37,3 @@ export default {
   },
 };
 </script>
-
-<style>
-h1 {
-  font-size: 35px;
-}
-</style>

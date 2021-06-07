@@ -1,6 +1,8 @@
 <template>
   <div>
-    <b-jumbotron lead="Publications"></b-jumbotron>
+    <b-jumbotron>
+      <p class="container lead">Publications</p>
+    </b-jumbotron>
     <div class="publications">
       <PostItem v-for="(post, index) of posts" :key="index" :post="post" />
     </div>
@@ -15,6 +17,18 @@ export default {
   data() {
     return { posts: [] };
   },
+  head() {
+    return {
+      title: `${this.posts.length} Publications`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: `Consultez les ${this.posts.length} publications`,
+        },
+      ],
+    };
+  },
   async fetch() {
     await axios
       .get("https://jsonplaceholder.typicode.com/posts")
@@ -26,6 +40,10 @@ export default {
 </script>
 
 <style>
+.lead {
+  font-size: 30px !important;
+  font-weight: bold;
+}
 .publications {
   display: grid;
   grid-template-columns: 1fr;
